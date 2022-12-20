@@ -10,11 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/GeoTheo06/chat-application-nodejs-websockets.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GeoTheo06/chat-application-nodejs-websockets/issues"
   },
-  "homepage": "https://github.com/GeoTheo06/chat-application-nodejs-websockets#readme"
+  "homepage": "https://github.com/GeoTheo06/chat-application-nodejs-websockets#readme",
+  "dependencies": {
+    "ws": "^8.11.0"
+  }
 }

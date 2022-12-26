@@ -3,18 +3,10 @@
     <title>WebSocket Chat</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
   </head>
   <body>
     <div class="h-screen w-screen flex flex-col justify-between">
-      <div id="chat" class="p-3 overflow-auto">
-        <p class="text-gray-700 py-1">Text message</p>
-        <p class="text-gray-700 py-1">Text message</p>
-        <p class="text-gray-700 py-1">Text message</p>
-      </div>
+      <div id="chat" class="p-3 overflow-auto"></div>
       <div class="flex">
         <input
           id="message"
@@ -31,7 +23,7 @@
       </div>
     </div>
     <script>
-      const ws = new WebSocket("ws://localhost:3000");
+      const ws = new WebSocket("ws://localhost:6969");
 
       ws.addEventListener("message", function (event) {
         const data = JSON.parse(event.data);
@@ -54,7 +46,7 @@
       }
 
       function addMessage(message) {
-        const node = document.createElement("P");
+        const node = document.createElement("p");
         const text = document.createTextNode(message);
         node.appendChild(text);
         node.classList.add("text-gray-700", "py-1");
